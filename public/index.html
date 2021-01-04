@@ -1,0 +1,21 @@
+<body>
+	<script>
+		if('geolocation' in navigator){
+			navigator.geolocation.getCurrentPosition(function(position){
+				const lat = position.coords.latitude;
+				const lon = position.coords.longitude;
+				document.getElementById('latitude').textContent = lat;
+				document.getElementById('longitude').textContent = lon;
+			});
+		}else{
+			console.log("geolocation is not available")
+		}
+	</script>
+	<h1>
+		Data Selfie App
+	</h1>
+	<p>
+		latitude:<span id="latitude"></span>&deg;<br/>
+		longitude:<span id="longitude"></span>&deg;<br/>
+	</p>
+</body>
