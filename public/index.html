@@ -14,9 +14,9 @@
 					},
 					body:JSON.stringify(data)
 				};
-				const response = await fetch('/api',options);
+				const response = await fetch('/something',options);//right side is request, left side is response
 				const json = await response.json();
-				console.log(json)
+				//console.log(json)
 			});
 		}else{
 			console.log("geolocation is not available")
